@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria
+from .models import Categoria, Producto
 
 @admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
@@ -11,4 +11,11 @@ class CategoriaAdmin(admin.ModelAdmin):
     ordering = ("nombre",)
 
 
-# Register your models here.
+@admin.register(Producto)
+class ProductoAdmin(admin.ModelAdmin):
+    list_display = (
+        "nombre",
+        "categoria",
+        "precio",
+        "disponible",
+    )

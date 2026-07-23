@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from .models import Producto
 
-# Create your views here.
+def menu(request):
+    productos = Producto.objects.filter(disponible=True)
+    contexto = {
+        "productos":productos,
+    }
+    return render(request,
+                "productos/menu.html",
+                contexto,
+        )

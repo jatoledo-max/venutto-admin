@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Venutto</title>
+</head>
+<body>
+    <h1>Menú Venutto</h1>
+
+    {% for producto in productos %}
+    
+    <hr>
+
+    <h2>{{ producto.nobre }}</h2>
+
+    <p>
+        <strong>Precio:</strong>
+        ${{ producto.precio }}
+    </p>
+    
+    <p>
+        {{ producto.descripcion }}
+    </p>
+
+    <p>
+        Categoría:
+        {{ producto.categoria }}
+    </p>
+    {% endfor %}
+</body>
+</html>
