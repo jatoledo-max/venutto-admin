@@ -8,8 +8,8 @@ class Categoria(models.Model):
         return self.nombre
 
 class Meta:
-    verbose_name = "Categoría"
-    verbose_name_plural = "Categorías"
+    verbose_name = "Categor�a"
+    verbose_name_plural = "Categor�as"
 
 class Producto(models.Model):
     nombre=models.CharField(max_length=50)
